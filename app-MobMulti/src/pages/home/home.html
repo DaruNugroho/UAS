@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Berita Terbaru
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let berita of beritaBaru">
+    <img src="{{berita.urlToImage}}"/>
+    <ion-card-header>
+     {{berita.title}}
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        {{berita.description}}
+      </p>
+      <a fill="outline" href="{{berita.url}}" large>Baca lebih lanjut</a>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
